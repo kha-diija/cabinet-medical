@@ -1,0 +1,172 @@
+/* Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #64748b;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.navbar-user:hover {
+    background: #f8fafc;
+}
+
+.navbar-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-user-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.navbar-user-role {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.navbar-logout {
+    gap: 8px;
+}
+
+.logout-text {
+    display: inline;
+}
+
+/* Mobile menu toggle */
+.navbar-menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+
+.navbar-menu-toggle:hover {
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+.navbar-menu-toggle:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+    .logout-text {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 16px;
+    }
+
+    .navbar-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-center {
+        display: none;
+    }
+
+    .navbar-user-info {
+        display: none;
+    }
+
+    .navbar-title {
+        font-size: 16px;
+    }
+
+    .navbar-btn {
+        padding: 6px 12px;
+    }
+
+    .navbar-logout {
+        padding: 8px;
+    }
+}

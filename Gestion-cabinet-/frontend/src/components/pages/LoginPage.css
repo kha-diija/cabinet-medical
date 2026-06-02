@@ -1,0 +1,209 @@
+/* =====================================
+   GLOBAL PAGE STYLE
+===================================== */
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e3efff, #f8faff);
+    overflow: hidden;
+    position: relative;
+    font-family: "Inter", sans-serif;
+}
+
+/* =====================================
+   BACKGROUND SHAPES
+===================================== */
+.login-background .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.45;
+    filter: blur(50px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 350px;
+    height: 350px;
+    background: #4a90e2;
+    top: -80px;
+    left: -80px;
+}
+
+.shape-2 {
+    width: 280px;
+    height: 280px;
+    background: #50c9c3;
+    bottom: -50px;
+    right: -30px;
+}
+
+.shape-3 {
+    width: 200px;
+    height: 200px;
+    background: #7f8ff4;
+    bottom: 150px;
+    left: -60px;
+}
+
+/* Animation des formes */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* =====================================
+   LOGIN CONTAINER
+===================================== */
+.login-container {
+    width: 380px;
+    padding: 35px 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    position: relative;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   HEADER
+===================================== */
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.login-header h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #1a2639;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: #7a8a97;
+    margin-top: 6px;
+}
+
+/* =====================================
+   FORM
+===================================== */
+.login-form .form-group {
+    margin-bottom: 18px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #d5ddea;
+    background: #f8faff;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.login-form input:focus {
+    border-color: #4a90e2;
+    background: white;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* =====================================
+   ERROR MESSAGE
+===================================== */
+.error-message {
+    background: #ffe4e4;
+    border-left: 4px solid #e74c3c;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    color: #c0392b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* =====================================
+   BUTTON
+===================================== */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-login:hover:not(:disabled) {
+    background: #3a7acc;
+    transform: translateY(-2px);
+}
+
+.btn-login:disabled {
+    background: #aac7eb;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+.login-footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #7a8a97;
+    font-size: 14px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+}

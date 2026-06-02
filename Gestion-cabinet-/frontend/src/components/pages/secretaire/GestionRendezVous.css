@@ -1,0 +1,674 @@
+.gestion-rendez-vous {
+    padding: 20px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+}
+
+/* En-tête */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Boutons */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-refresh {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-refresh:hover {
+    background: #667eea;
+    color: white;
+}
+
+.btn-refresh:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Alerte */
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: slideDown 0.3s ease;
+}
+
+.alert-error {
+    background: #fff5f5;
+    border: 1px solid #feb2b2;
+    color: #c53030;
+}
+
+.alert-icon {
+    font-size: 24px;
+}
+
+.alert-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+/* Container calendrier */
+.calendar-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 20px;
+    height: calc(100vh - 200px);
+}
+
+/* Calendrier principal */
+.calendar-main {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation calendrier */
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.nav-btn {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4a5568;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.current-month {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+    text-transform: capitalize;
+}
+
+/* Grille calendrier */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    flex: 1;
+}
+
+.calendar-day-header {
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0;
+    color: #4a5568;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.calendar-day {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-day:hover {
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.calendar-day.other-month {
+    background: #f7fafc;
+    color: #a0aec0;
+}
+
+.calendar-day.today {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    border-color: #667eea;
+    border-width: 3px;
+}
+
+.calendar-day.selected {
+    background: linear-gradient(135deg, #667eea25 0%, #764ba225 100%);
+    border-color: #764ba2;
+    border-width: 3px;
+}
+
+.calendar-day.has-rdv {
+    background: linear-gradient(to bottom, white 0%, #f0f4ff 100%);
+}
+
+.day-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.calendar-day.other-month .day-number {
+    color: #cbd5e0;
+}
+
+.calendar-day.today .day-number {
+    color: #667eea;
+}
+
+.day-rdvs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.rdv-indicator {
+    background: #667eea;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.rdv-time {
+    font-weight: 600;
+}
+
+.rdv-patient {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rdv-more {
+    font-size: 11px;
+    color: #667eea;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* Loading */
+.calendar-loading {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    color: #667eea;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Sidebar2 */
+.calendar-sidebar {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.no-rdv {
+    text-align: center;
+    padding: 60px 20px;
+    color: #a0aec0;
+}
+
+.no-rdv-icon {
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+
+/* Liste RDV */
+.rdv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rdv-card {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.rdv-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.rdv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.rdv-time-large {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.rdv-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-confirme {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-attente {
+    background: #feebc8;
+    color: #744210;
+}
+
+.status-annule {
+    background: #fed7d7;
+    color: #742a2a;
+}
+
+.status-termine {
+    background: #e2e8f0;
+    color: #2d3748;
+}
+
+.rdv-patient-info {
+    margin-bottom: 12px;
+}
+
+.patient-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.patient-tel {
+    font-size: 13px;
+    color: #718096;
+}
+
+.rdv-motif {
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: white;
+    border-radius: 6px;
+}
+
+.rdv-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-small {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-view {
+    background: #667eea;
+    color: white;
+}
+
+.btn-view:hover {
+    background: #5568d3;
+}
+
+.btn-edit {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-edit:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Statistiques */
+.sidebar-stats {
+    padding: 20px;
+    background: #f7fafc;
+    border-top: 2px solid #e2e8f0;
+}
+
+.sidebar-stats h4 {
+    margin: 0 0 15px 0;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: #4a5568;
+}
+
+.stat-item strong {
+    font-size: 20px;
+    color: #667eea;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .calendar-container {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-sidebar {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-grid {
+        gap: 4px;
+    }
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 6px;
+    }
+
+    .day-number {
+        font-size: 14px;
+    }
+}
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    color:black;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.rdv-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.rdv-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.rdv-form input,
+.rdv-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color:black;
+
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #d0d0d0;
+}
+
+/* ===== Actions changement de statut RDV ===== */
+.statut-actions {
+    margin-top: 16px;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.statut-actions p {
+    margin-bottom: 10px;
+    color: #374151;
+    font-size: 14px;
+}
+
+/* Boutons container */
+.statut-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Boutons communs */
+.btn-small {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Confirmer */
+.btn-confirme {
+    background: #22c55e;
+    color: #fff;
+}
+.btn-confirme:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+}
+
+/* Terminer */
+.btn-termine {
+    background: #3b82f6;
+    color: #fff;
+}
+.btn-termine:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Annuler */
+.btn-annule {
+    background: #ef4444;
+    color: #fff;
+}
+.btn-annule:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+/* Désactiver visuellement si besoin */
+.btn-small:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

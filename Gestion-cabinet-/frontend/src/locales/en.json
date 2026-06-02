@@ -1,0 +1,342 @@
+{
+  "nav": {
+    "login": "Login",
+    "signup": "New Clinic"
+  },
+  "hero": {
+    "title": "Clinic Management",
+    "subtitle": "Simplified and Secure",
+    "description": "MediCore is your all-in-one platform for managing your medical clinic. Patient management, appointments, medical records and payments in one place.",
+    "loginBtn": "Login",
+    "signupBtn": "Get Started",
+    "stats": {
+      "clinics": "Partner Clinics",
+      "patients": "Managed Patients",
+      "uptime": "Uptime"
+    }
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Essential tools to manage your clinic efficiently",
+    "items": {
+      "patients": {
+        "title": "Patient Management",
+        "description": "Manage complete patient files with full medical history"
+      },
+      "appointments": {
+        "title": "Appointment Scheduling",
+        "description": "Smart appointment system with automatic reminders"
+      },
+      "records": {
+        "title": "Medical Records",
+        "description": "Secure storage of medical records with instant access"
+      },
+      "analytics": {
+        "title": "Analytics & Reports",
+        "description": "Visualize your clinic's statistics in real-time"
+      },
+      "security": {
+        "title": "GDPR Security",
+        "description": "Full compliance with data protection standards"
+      },
+      "access": {
+        "title": "Access Control",
+        "description": "Role and permission management to secure your data"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Customer Reviews",
+    "subtitle": "Discover what doctors and secretaries who use MediCore say",
+    "items": [
+      {
+        "name": "Dr. Ahmed Bennani",
+        "role": "Cardiologist - Rabat",
+        "comment": "MediCore has revolutionized my clinic management. Time-saving and remarkable efficiency!"
+      },
+      {
+        "name": "Dr. Fatima Zahra",
+        "role": "General Practitioner - Casablanca",
+        "comment": "Intuitive interface and excellent customer support. Highly recommend!"
+      },
+      {
+        "name": "Dr. Mohamed Youssef",
+        "role": "Dermatologist - Marrakech",
+        "comment": "The security of my patients' data is my priority. MediCore meets standards!"
+      },
+      {
+        "name": "Ms. Zineb Omar",
+        "role": "Medical Secretary - Fez",
+        "comment": "Organizing appointments has become child's play with MediCore!"
+      },
+      {
+        "name": "Dr. Karim Hadj",
+        "role": "ENT - Tangier",
+        "comment": "Best investment for my clinic. Impressive ROI after 3 months!"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Clinic?",
+    "description": "Join hundreds of medical clinics already managing their patients with MediCore. It's simple, secure and efficient.",
+    "loginBtn": "Login",
+    "signupBtn": "Sign Up Free"
+  },
+  "footer": {
+    "about": {
+      "title": "About",
+      "items": ["Who are we?", "Our Mission", "News"]
+    },
+    "product": {
+      "title": "Product",
+      "items": ["Features", "Pricing", "Security"]
+    },
+    "support": {
+      "title": "Support",
+      "items": ["Help Center", "Documentation", "Contact"]
+    },
+    "legal": {
+      "title": "Legal",
+      "items": ["Privacy Policy", "Terms of Use", "Legal Notices"]
+    },
+    "copyright": "All rights reserved. | Smart Clinic Management"
+  },
+  "login": {
+    "title": "Login",
+    "selectRole": "Select your role:",
+    "changeRole": "Change role",
+    "connectedAs": "Connected as:",
+    "roles": {
+      "admin": {
+        "label": "Administrator",
+        "description": "Admin access"
+      },
+      "doctor": {
+        "label": "Doctor",
+        "description": "Clinic access"
+      },
+      "secretary": {
+        "label": "Secretary",
+        "description": "Secretarial access"
+      }
+    },
+    "fields": {
+      "email": "Email or Login",
+      "emailPlaceholder": "your@email.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "cabinet": "Select your Clinic",
+      "cabinetPlaceholder": "Choose a clinic..."
+    },
+    "cabinets": {
+      "rabat": "Medical Clinic Rabat",
+      "casa": "Health Clinic Casablanca",
+      "marrakech": "Medical Center Marrakech"
+    },
+    "forgotPassword": "Forgot password?",
+    "submitBtn": "Sign In",
+    "submitting": "Signing in...",
+    "errors": {
+      "fillAll": "Please fill in all fields",
+      "selectCabinet": "Please select a clinic",
+      "connectionFailed": "Login error. Please try again."
+    },
+    "success": "Successfully logged in!"
+  },
+  "signup": {
+    "title": "Medical Office Registration",
+    "subtitle": "Simplified and Secure Management",
+
+    "steps": {
+      "cabinet": "Office",
+      "medecin": "Doctor",
+      "secretaire": "Secretary",
+      "confirmation": "Confirmation"
+    },
+
+    "home": "Home",
+    "previous": "Previous",
+    "next": "Next",
+    "submit": "Submit",
+    "errors": {
+      "validationFailed": "Validation failed, please fill in the required fields."
+    },
+    "alert": {
+      "success": "An email will be sent to inform you whether your application has been accepted or rejected.",
+      "error": "An error occurred while submitting the form."
+    },
+    "cabinet": {
+      "title": "Clinic Information",
+      "name": "Clinic Name",
+      "namePlaceholder": "Ex: Al Chefa Medical Clinic",
+      "specialty": "Specialty",
+      "specialtyPlaceholder": "Select a specialty",
+      "specialties": {
+        "general": "General Practice",
+        "cardiology": "Cardiology",
+        "dermatology": "Dermatology",
+        "orthopedics": "Orthopedics",
+        "pediatrics": "Pediatrics",
+        "gynecology": "Obstetrics and Gynecology",
+        "ophthalmology": "Ophthalmology",
+        "ent": "ENT (Otolaryngology)",
+        "neurology": "Neurology",
+        "psychiatry": "Psychiatry",
+        "gastroenterology": "Gastroenterology",
+        "pulmonology": "Pulmonology",
+        "urology": "Urology",
+        "nephrology": "Nephrology",
+        "endocrinology": "Endocrinology",
+        "rheumatology": "Rheumatology",
+        "oncology": "Oncology",
+        "surgery": "General Surgery",
+        "plastic_surgery": "Plastic Surgery",
+        "radiology": "Radiology",
+        "anesthesiology": "Anesthesiology",
+        "dentistry": "Dentistry",
+        "physiotherapy": "Physiotherapy",
+        "nutrition": "Nutrition",
+        "biology": "Medical Biology"
+      },
+      "mandatoryFields": "Fields marked with an asterisk (*) are mandatory.",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Invalid email format",
+        "invalidPhone": "Invalid phone number"
+      },
+      "phone": "Clinic Phone",
+      "phonePlaceholder": "05 XX XX XX XX",
+      "email": "Clinic Email",
+      "emailPlaceholder": "contact@clinic.com",
+      "address": "Clinic Address",
+      "addressPlaceholder": "Full clinic address",
+      "logo": "Clinic Logo",
+      "logoPlaceholder": "Choose a file",
+      "logoHelp": "Recommended format: PNG or JPEG (max 2MB)",
+      "optional": "Optional"
+    },
+    "doctor": {
+      "title": "Doctor Information",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Last Name",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "First Name",
+      "cin": "National ID (CIN)",
+      "cinPlaceholder": "National ID",
+      "phone": "Phone",
+      "phonePlaceholder": "Phone Number",
+      "email": "Email",
+      "emailPlaceholder": "example@domain.com",
+      "login": "Username",
+      "loginPlaceholder": "Username",
+      "password": "Password",
+      "passwordPlaceholder": "Password",
+      "diploma": "Doctor's Diploma",
+      "chooseFile": "Choose a file",
+      "fileHelp": "Recommended format: PDF or Image (PNG/JPG), max 2MB",
+      "optional": "Optional",
+      "cinCopy": "ID Card Copy (CIN)",
+      "license": "Medical License",
+      "mandatoryFields": "Fields marked with an asterisk (*) are mandatory.",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Invalid email format",
+        "fileRequired": "Supporting document is required"
+      }
+    },
+    "secretary": {
+      "title": "Secretary Information (Optional)",
+      "checkbox": "Yes, I have a secretary to include",
+      "details": "Secretary Details",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Last Name",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "First Name",
+      "cin": "National ID (CIN)",
+      "cinPlaceholder": "National ID",
+      "phone": "Phone",
+      "phonePlaceholder": "Phone Number",
+      "email": "Email",
+      "emailPlaceholder": "Email",
+      "login": "Username",
+      "loginPlaceholder": "Secretary Username",
+      "password": "Password",
+      "passwordPlaceholder": "Secretary Password"
+    },
+    "confirmation": {
+      "title": "Verification and Confirmation",
+      "subtitle": "Please carefully review all provided information before submitting your registration request.",
+      "doctorInfo": "Doctor Information",
+      "cabinetInfo": "Clinic Information",
+      "secretaryInfo": "Secretary Information",
+      "documents": "Submitted Documents",
+      "signature": "Doctor's Signature",
+      "signatureHelp": "Please sign in the box below using your mouse or finger.",
+      "notProvided": "Not provided",
+      "mandatorySignature": "Signature is required to validate registration.",
+      "errors": {
+        "signatureRequired": "Please sign in the box above",
+        "termsRequired": "You must accept the terms and conditions"
+      },
+      "labels": {
+        "name": "Full Name",
+        "cin": "National ID (CIN)",
+        "phone": "Phone",
+        "email": "Email",
+        "login": "Login",
+        "cabinetName": "Clinic Name",
+        "specialty": "Specialty",
+        "address": "Address",
+        "diploma": "Diploma",
+        "license": "License",
+        "copyCin": "ID Copy"
+      },
+      "acceptTerms": "I have read and agree to the Terms of Service.",
+      "readTerms": "Read Terms",
+      "termsTitle": "Terms of Service",
+      "acceptAndClose": "Accept and Close",
+      "termsContent": "<h3>Terms of Service</h3><ol><li><strong>Acceptance of Terms:</strong> By registering, you agree to abide by all terms and conditions set forth below.</li><li><strong>Confidentiality:</strong> Your medical and personal data are treated with the utmost confidentiality, in accordance with applicable laws (GDPR, etc.).</li><li><strong>Usage License:</strong> Access to the platform is subject to an annual/monthly license.</li><li><strong>Medical Liability:</strong> The platform is merely a management tool; full responsibility for medical acts remains with the practitioner.</li><li><strong>Cancellation:</strong> You may cancel your registration with 30 days notice, subject to conditions.</li></ol><p>Please read the full document available at the dedicated URL.</p>"
+    }
+  },
+  "forgotPassword": {
+    "title": "Forgot Password?",
+    "subtitle": "Enter your email address and we'll send you a link to reset your password.",
+    "fields": {
+      "email": "Professional Email",
+      "emailPlaceholder": "doctor@clinic.com"
+    },
+    "submitBtn": "Send Reset Link",
+    "submitting": "Sending...",
+    "backToLogin": "Back to Login",
+    "success": {
+      "title": "Email Sent Successfully!",
+      "message": "If an account exists with this email, you will receive a reset link in a few moments."
+    },
+    "errors": {
+      "networkError": "Unable to contact the server. Please try again."
+    }
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "subtitle": "Choose a new secure password for your account.",
+    "fields": {
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Minimum 8 characters",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter password"
+    },
+    "submitBtn": "Reset Password",
+    "submitting": "Resetting...",
+    "backToLogin": "Back to Login",
+    "success": {
+      "title": "Password Changed!",
+      "message": "Your password has been successfully reset. You can now log in."
+    },
+    "errors": {
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "invalidToken": "Invalid or expired link. Please request a new link.",
+      "networkError": "Unable to contact the server. Please try again."
+    }
+  }
+}

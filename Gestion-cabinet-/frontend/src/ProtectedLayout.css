@@ -1,0 +1,283 @@
+/* ProtectedLayout.css - Styles UNIQUEMENT pour les routes protégées */
+
+/* ==========================
+   Variables pour le layout protégé
+========================== */
+:root {
+    --navbar-height: 60px;
+    --sidebar-width: 280px;
+    --sidebar-collapsed-width: 80px;
+
+    /* Couleurs fixes pour la sidebar */
+    --sidebar-bg-start: #1e40af;
+    --sidebar-bg-end: #1e3a8a;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: rgba(255, 255, 255, 0.7);
+    --sidebar-hover-bg: rgba(255, 255, 255, 0.1);
+    --sidebar-active-bg: rgba(59, 130, 246, 0.3);
+    --sidebar-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================
+   Layout principal (UNIQUEMENT pour les pages avec sidebar)
+========================== */
+
+/* Container principal avec navbar fixe */
+.protected-layout .app-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: var(--navbar-height);
+}
+
+/* Contenu principal avec marges pour sidebar */
+.protected-layout .main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 24px;
+    min-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: hsl(var(--color-background));
+}
+
+/* Adaptation quand la sidebar est collapsed */
+.protected-layout .sidebar.collapsed ~ .main-content {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+/* Container pour les pages avec du contenu */
+.protected-layout .page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Header2 de page */
+.protected-layout .page-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid hsl(var(--color-border));
+}
+
+.protected-layout .page-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: hsl(var(--color-foreground));
+    margin-bottom: 8px;
+}
+
+.protected-layout .page-subtitle {
+    font-size: 14px;
+    color: hsl(var(--color-foreground) / 0.6);
+}
+
+/* Cards et sections */
+.protected-layout .content-card {
+    background: hsl(var(--color-card));
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid hsl(var(--color-border));
+    transition: all 0.2s ease;
+}
+
+.protected-layout .content-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   Navbar fixe
+========================== */
+.protected-layout .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    z-index: 1000;
+    background: hsl(var(--color-card));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid hsl(var(--color-border));
+    transition: all 0.3s ease;
+}
+
+/* ==========================
+   Sidebar2 avec couleur fixe bleue
+========================== */
+.protected-layout .sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    z-index: 999;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Couleur fixe bleue */
+    background: linear-gradient(180deg, var(--sidebar-bg-start) 0%, var(--sidebar-bg-end) 100%);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    border-right: 1px solid var(--sidebar-border);
+}
+
+.protected-layout .sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+/* Forcer en mode dark aussi */
+.dark .protected-layout .sidebar {
+    background: linear-gradient(180deg, var(--sidebar-bg-start) 0%, var(--sidebar-bg-end) 100%);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar du contenu principal */
+.protected-layout .main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.protected-layout .main-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.protected-layout .main-content::-webkit-scrollbar-thumb {
+    background: hsl(var(--color-border));
+    border-radius: 4px;
+}
+
+.protected-layout .main-content::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--color-primary) / 0.8);
+}
+
+/* Scrollbar de la sidebar */
+.protected-layout .sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.protected-layout .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.protected-layout .sidebar::-webkit-scrollbar-thumb {
+    background: var(--sidebar-text-muted);
+    border-radius: 3px;
+}
+
+.protected-layout .sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--sidebar-text);
+}
+
+/* ==========================
+   Animations
+========================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+@media (max-width: 1024px) {
+    .protected-layout .main-content {
+        margin-left: var(--sidebar-collapsed-width);
+        padding: 16px;
+    }
+
+    .protected-layout .sidebar {
+        width: var(--sidebar-collapsed-width);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --navbar-height: 56px;
+    }
+
+    .protected-layout .app-container {
+        padding-top: var(--navbar-height);
+    }
+
+    .protected-layout .main-content {
+        margin-left: 0;
+        padding: 12px;
+        min-height: calc(100vh - var(--navbar-height));
+    }
+
+    .protected-layout .sidebar {
+        width: var(--sidebar-width);
+        transform: translateX(-100%);
+    }
+
+    .protected-layout .sidebar.mobile-open {
+        transform: translateX(0);
+        box-shadow: 4px 0 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .protected-layout .page-title {
+        font-size: 24px;
+    }
+
+    .protected-layout .page-container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .protected-layout .main-content {
+        padding: 8px;
+    }
+
+    .protected-layout .page-title {
+        font-size: 20px;
+    }
+
+    .protected-layout .content-card {
+        padding: 16px;
+        border-radius: 8px;
+    }
+}
+
+/* ==========================
+   Mode sombre
+========================== */
+.dark .protected-layout .content-card {
+    background: hsl(var(--color-card));
+    border-color: hsl(var(--color-border));
+}
+
+.dark .protected-layout .navbar {
+    background: hsl(var(--color-card));
+    border-bottom-color: hsl(var(--color-border));
+}
+
+.dark .protected-layout .main-content {
+    background-color: hsl(var(--color-background));
+}
+
+/* ==========================
+   Print styles
+========================== */
+@media print {
+    .protected-layout .navbar,
+    .protected-layout .sidebar {
+        display: none !important;
+    }
+
+    .protected-layout .main-content {
+        margin-left: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .protected-layout .app-container {
+        padding-top: 0 !important;
+    }
+}

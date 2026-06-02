@@ -1,0 +1,23 @@
+package com.cabinetmedical.gestioncabinet;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+
+import org.springframework.boot.test.context.SpringBootTest;
+/*
+@SpringBootTest
+class GestioncabinetApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+} */
+@SpringBootTest
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class GestioncabinetApplicationTests {
+    @Test
+    void contextLoads() {
+    }
+}
+

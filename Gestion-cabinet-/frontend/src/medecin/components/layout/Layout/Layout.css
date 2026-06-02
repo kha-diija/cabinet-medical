@@ -1,0 +1,38 @@
+/* ============================================
+   1. src/medecin/components/layout/Layout/Layout.css
+   ============================================ */
+
+.app-layout {
+    min-height: 100vh;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+
+
+.content-wrapper {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Quand la sidebar est réduite */
+.sidebar.collapsed + .main-content {
+    margin-left: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding-top: 70px;
+    }
+    
+    .sidebar.collapsed + .main-content {
+        margin-left: 0;
+    }
+    
+    .content-wrapper {
+        padding: 16px;
+    }
+}

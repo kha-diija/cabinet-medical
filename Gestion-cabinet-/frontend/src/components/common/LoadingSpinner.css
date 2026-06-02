@@ -1,0 +1,42 @@
+/* LoadingSpinner.css */
+
+/* Conteneur principal : occupe tout l'écran et centre le contenu */
+.loading-spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* pleine hauteur */
+    background-color: #f5f7fa; /* fond clair */
+}
+
+/* Bloc du spinner + texte */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* espace entre spinner et texte */
+}
+
+/* Cercle animé */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e0e0e0; /* couleur de fond du cercle */
+    border-top: 6px solid #667eea; /* couleur animée */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Texte de chargement */
+.loading-spinner p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+/* Animation de rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

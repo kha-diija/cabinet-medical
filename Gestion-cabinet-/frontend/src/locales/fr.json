@@ -1,0 +1,343 @@
+{
+  "nav": {
+    "login": "Connexion",
+    "signup": "Nouvelle Clinique"
+  },
+  "hero": {
+    "title": "Gestion de Cabinet",
+    "subtitle": "Simplifiée et Sécurisée",
+    "description": "MediCore est votre plateforme tout-en-un pour gérer votre cabinet médical. Gestion de patients, rendez-vous, dossiers médicaux et paiements en un seul endroit.",
+    "loginBtn": "Se Connecter",
+    "signupBtn": "Commencer Maintenant",
+    "stats": {
+      "clinics": "Cabinets Partenaires",
+      "patients": "Patients Gérés",
+      "uptime": "Disponibilité"
+    }
+  },
+  "features": {
+    "title": "Tout ce dont vous avez besoin",
+    "subtitle": "Les outils essentiels pour gérer votre cabinet efficacement",
+    "items": {
+      "patients": {
+        "title": "Gestion de Patients",
+        "description": "Gère les dossiers complets de vos patients avec historique médical complet"
+      },
+      "appointments": {
+        "title": "Planification de Rendez-vous",
+        "description": "Système de rendez-vous intelligent avec rappels automatiques"
+      },
+      "records": {
+        "title": "Dossiers Médicaux",
+        "description": "Stockage sécurisé des dossiers médicaux avec accès instant"
+      },
+      "analytics": {
+        "title": "Analytics & Rapports",
+        "description": "Visualisez les statistiques de votre cabinet en temps réel"
+      },
+      "security": {
+        "title": "Sécurité RGPD",
+        "description": "Conformité complète avec les normes de protection des données"
+      },
+      "access": {
+        "title": "Contrôle d'Accès",
+        "description": "Gestion des rôles et permissions pour sécuriser vos données"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Avis de nos Clients",
+    "subtitle": "Découvrez ce que disent les médecins et secrétaires qui utilisent MediCore",
+    "items": [
+      {
+        "name": "Dr. Ahmed Bennani",
+        "role": "Cardiologue - Rabat",
+        "comment": "MediCore a révolutionné la gestion de mon cabinet. Gain de temps et efficacité remarquable!"
+      },
+      {
+        "name": "Dr. Fatima Zahra",
+        "role": "Généraliste - Casablanca",
+        "comment": "Interface intuitive et support client excellent. Je recommande vivement!"
+      },
+      {
+        "name": "Dr. Mohamed Youssef",
+        "role": "Dermatologue - Marrakech",
+        "comment": "La sécurité des données de mes patients est ma priorité. MediCore respecte les normes!"
+      },
+      {
+        "name": "Mme Zineb Omar",
+        "role": "Secrétaire Médicale - Fez",
+        "comment": "L'organisation des rendez-vous est devenue un jeu d'enfant avec MediCore!"
+      },
+      {
+        "name": "Dr. Karim Hadj",
+        "role": "ORL - Tanger",
+        "comment": "Meilleur investissement pour mon cabinet. ROI impressionnant après 3 mois!"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Cabinet?",
+    "description": "Rejoignez des centaines de cabinets médicaux qui gèrent déjà leurs patients avec MediCore. C'est simple, sécurisé et efficace.",
+    "loginBtn": "Se Connecter",
+    "signupBtn": "S'Inscrire Gratuitement"
+  },
+  "footer": {
+    "about": {
+      "title": "À Propos",
+      "items": ["Qui sommes-nous?", "Notre Mission", "Actualités"]
+    },
+    "product": {
+      "title": "Produit",
+      "items": ["Fonctionnalités", "Tarification", "Sécurité"]
+    },
+    "support": {
+      "title": "Support",
+      "items": ["Centre d'Aide", "Documentation", "Contact"]
+    },
+    "legal": {
+      "title": "Légal",
+      "items": ["Politique de Confidentialité", "Conditions d'Utilisation", "Mentions Légales"]
+    },
+    "copyright": "Tous droits réservés. | Gestion de Cabinet Intelligente"
+  },
+  "login": {
+    "title": "Connexion",
+    "selectRole": "Sélectionnez votre rôle:",
+    "changeRole": "Changer de rôle",
+    "connectedAs": "Connecté en tant que:",
+    "roles": {
+      "admin": {
+        "label": "Administrateur",
+        "description": "Accès administrateur"
+      },
+      "doctor": {
+        "label": "Médecin",
+        "description": "Accès cabinet"
+      },
+      "secretary": {
+        "label": "Secrétaire",
+        "description": "Accès secrétariat"
+      }
+    },
+    "fields": {
+      "email": "Email ou Identifiant",
+      "emailPlaceholder": "votre@email.com",
+      "password": "Mot de Passe",
+      "passwordPlaceholder": "••••••••",
+      "cabinet": "Sélectionnez votre Cabinet",
+      "cabinetPlaceholder": "Choisir un cabinet..."
+    },
+    "cabinets": {
+      "rabat": "Cabinet Médical Rabat",
+      "casa": "Clinique Santé Casablanca",
+      "marrakech": "Centre Médical Marrakech"
+    },
+    "forgotPassword": "Mot de passe oublié?",
+    "submitBtn": "Se Connecter",
+    "submitting": "Connexion en cours...",
+    "errors": {
+      "fillAll": "Veuillez remplir tous les champs",
+      "selectCabinet": "Veuillez sélectionner un cabinet",
+      "connectionFailed": "Erreur lors de la connexion. Veuillez réessayer."
+    },
+    "success": "Connexion réussie!"
+  },
+  "signup": {
+    "title": "Inscription Cabinet Médical",
+    "subtitle": "Gestion Simplifiée et Sécurisée",
+
+    "steps": {
+      "cabinet": "Cabinet",
+      "medecin": "Médecin",
+      "secretaire": "Secrétaire",
+      "confirmation": "Confirmation"
+    },
+
+    "home": "Accueil",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "errors": {
+      "validationFailed": "Validation échouée, veuillez remplir les champs obligatoires."
+    },
+    "alert": {
+      "success": "Un e-mail vous sera envoyé pour vous informer si votre candidature a été acceptée ou refusée.",
+      "error": "Une erreur est survenue lors de l'envoi du formulaire."
+    },
+    "cabinet": {
+      "title": "Informations du Cabinet",
+      "name": "Nom du Cabinet",
+      "namePlaceholder": "Ex: Cabinet Médical Al Chefa",
+      "specialty": "Spécialité",
+      "specialtyPlaceholder": "Sélectionnez une spécialité",
+      "specialties": {
+        "general": "Médecine Générale",
+        "cardiology": "Cardiologie",
+        "dermatology": "Dermatologie",
+        "orthopedics": "Traumatologie - Orthopédie",
+        "pediatrics": "Pédiatrie",
+        "gynecology": "Gynécologie - Obstétrique",
+        "ophthalmology": "Ophtalmologie",
+        "ent": "Oto-rhino-laryngologie (ORL)",
+        "neurology": "Neurologie",
+        "psychiatry": "Psychiatrie",
+        "gastroenterology": "Gastro-entérologie",
+        "pulmonology": "Pneumologie",
+        "urology": "Urologie",
+        "nephrology": "Néphrologie",
+        "endocrinology": "Endocrinologie - Diabétologie",
+        "rheumatology": "Rhumatologie",
+        "oncology": "Oncologie",
+        "surgery": "Chirurgie Générale",
+        "plastic_surgery": "Chirurgie Plastique et Esthétique",
+        "radiology": "Radiologie",
+        "anesthesiology": "Anesthésie - Réanimation",
+        "dentistry": "Médecine Dentaire",
+        "physiotherapy": "Kinésithérapie",
+        "nutrition": "Nutrition - Diététique",
+        "biology": "Biologie Médicale (Laboratoire)"
+      },
+      "mandatoryFields": "Les champs marqués d'un astérisque (*) sont obligatoires.",
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "invalidEmail": "Format d'email invalide",
+        "invalidPhone": "Numéro de téléphone invalide"
+      },
+      "phone": "Téléphone Cabinet",
+      "phonePlaceholder": "05 XX XX XX XX",
+      "email": "Email Cabinet",
+      "emailPlaceholder": "contact@cabinet.com",
+      "address": "Adresse Cabinet",
+      "addressPlaceholder": "Adresse complète du cabinet",
+      "logo": "Logo du Cabinet",
+      "logoPlaceholder": "Choisir un fichier",
+      "logoHelp": "Format recommandé : PNG ou JPEG (max 2MB)",
+      "optional": "Optionnel"
+    },
+    "doctor": {
+      "title": "Informations du Médecin",
+      "lastName": "Nom",
+      "lastNamePlaceholder": "Nom",
+      "firstName": "Prénom",
+      "firstNamePlaceholder": "Prénom",
+      "cin": "CIN",
+      "cinPlaceholder": "CIN",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Téléphone",
+      "email": "Email",
+      "emailPlaceholder": "exemple@domaine.com",
+      "login": "Login",
+      "loginPlaceholder": "Login",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Mot de passe",
+      "diploma": "Diplôme du Médecin",
+      "chooseFile": "Choisir un fichier",
+      "fileHelp": "Format recommandé : PDF ou image (PNG/JPG), max 2MB",
+      "optional": "Optionnel",
+      "cinCopy": "Copie de la CIN",
+      "license": "Licence d'exercice",
+      "mandatoryFields": "Les champs marqués d'un astérisque (*) sont obligatoires.",
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "invalidEmail": "Format d'email invalide",
+        "fileRequired": "Le document justificatif est requis"
+      }
+    },
+    "secretary": {
+      "title": "Informations Secrétaire (Optionnel)",
+      "checkbox": "Oui, j'ai une secrétaire à inclure",
+      "details": "Détails de la Secrétaire",
+      "lastName": "Nom",
+      "lastNamePlaceholder": "Nom de famille",
+      "firstName": "Prénom",
+      "firstNamePlaceholder": "Prénom",
+      "cin": "CIN",
+      "cinPlaceholder": "CIN",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Téléphone",
+      "email": "Email",
+      "emailPlaceholder": "Email",
+      "login": "Login",
+      "loginPlaceholder": "Login Secrétaire",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Mot de passe Secrétaire"
+    },
+    "confirmation": {
+      "title": "Vérification et Confirmation",
+      "subtitle": "Veuillez vérifier attentivement toutes les informations fournies avant de soumettre votre demande d'inscription.",
+      "doctorInfo": "Informations du Médecin",
+      "cabinetInfo": "Informations du Cabinet",
+      "secretaryInfo": "Informations de la Secrétaire",
+      "documents": "Documents Soumis",
+      "signature": "Signature du Médecin",
+      "signatureHelp": "Veuillez signer dans la zone ci-dessous à l'aide de votre souris ou de votre doigt.",
+      "notProvided": "Non fourni",
+      "mandatorySignature": "La signature est requise pour valider l'inscription.",
+      "errors": {
+        "signatureRequired": "Veuillez signer dans la case ci-dessus",
+        "termsRequired": "Vous devez accepter les conditions générales"
+      },
+      "labels": {
+        "name": "Nom & Prénom",
+        "cin": "CIN",
+        "phone": "Téléphone",
+        "email": "Email",
+        "login": "Login",
+        "cabinetName": "Nom du Cabinet",
+        "specialty": "Spécialité",
+        "address": "Adresse",
+        "diploma": "Diplôme",
+        "license": "Licence",
+        "copyCin": "Copie CIN"
+      },
+      "acceptTerms": "J'ai lu et j'accepte les conditions générales d'utilisation.",
+      "readTerms": "Lire les CGU",
+      "termsTitle": "Conditions Générales d'Utilisation",
+      "acceptAndClose": "Accepter et Fermer",
+      "termsContent": "<h3>Conditions Générales d'Utilisation</h3><ol><li><strong>Acceptation des Termes:</strong> En vous inscrivant, vous acceptez de respecter tous les termes et conditions énoncés ci-dessous.</li><li><strong>Confidentialité:</strong> Vos données médicales et personnelles sont traitées avec la plus grande confidentialité, conformément aux lois en vigueur (RGPD, etc.).</li><li><strong>Licence d'utilisation:</strong> L'accès à la plateforme est soumis à une licence annuelle/mensuelle.</li><li><strong>Responsabilité Médicale:</strong> La plateforme n'est qu'un outil de gestion; la responsabilité des actes médicaux reste entière au praticien.</li><li><strong>Annulation:</strong> Vous pouvez annuler votre inscription avec un préavis de 30 jours, sous conditions.</li></ol><p>Veuillez lire le document complet disponible à l'URL dédiée.</p>"
+    }
+  },
+  "forgotPassword": {
+    "title": "Mot de passe oublié ?",
+    "subtitle": "Entrez votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "fields": {
+      "email": "Email professionnel",
+      "emailPlaceholder": "medecin@cabinet.com"
+    },
+    "submitBtn": "Envoyer le lien",
+    "submitting": "Envoi en cours...",
+    "backToLogin": "Retour à la connexion",
+    "success": {
+      "title": "Email envoyé avec succès !",
+      "message": "Si un compte existe avec cet email, vous recevrez un lien de réinitialisation dans quelques instants."
+    },
+    "errors": {
+      "networkError": "Impossible de contacter le serveur. Veuillez réessayer."
+    }
+  },
+  "resetPassword": {
+    "title": "Réinitialiser le mot de passe",
+    "subtitle": "Choisissez un nouveau mot de passe sécurisé pour votre compte.",
+    "fields": {
+      "newPassword": "Nouveau mot de passe",
+      "newPasswordPlaceholder": "Minimum 8 caractères",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Saisir à nouveau le mot de passe"
+    },
+    "submitBtn": "Réinitialiser le mot de passe",
+    "submitting": "Réinitialisation...",
+    "backToLogin": "Retour à la connexion",
+    "success": {
+      "title": "Mot de passe modifié !",
+      "message": "Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter."
+    },
+    "errors": {
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "invalidToken": "Lien invalide ou expiré. Veuillez demander un nouveau lien.",
+      "networkError": "Impossible de contacter le serveur. Veuillez réessayer."
+    }
+  }
+
+}

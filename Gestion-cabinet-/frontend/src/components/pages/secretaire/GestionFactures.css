@@ -1,0 +1,568 @@
+/* ============================================
+   GESTION FACTURES - STYLES
+   ============================================ */
+
+/* Animation Spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Container Principal */
+.factures-container {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+/* Header2 avec Gradient */
+.factures-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.factures-header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+}
+
+.factures-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+.factures-subtitle {
+    font-size: 14px;
+    margin: 4px 0 0 0;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Grille de Statistiques */
+.factures-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.factures-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.factures-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.factures-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.factures-stat-icon.blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.factures-stat-icon.green {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.factures-stat-icon.yellow {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.factures-stat-icon.purple {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+}
+
+.factures-stat-content {
+    flex: 1;
+}
+
+.factures-stat-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.factures-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 4px 0 0 0;
+}
+
+/* Barre de Filtres */
+.factures-filters-bar {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.factures-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.factures-filter-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.factures-filter-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    background:black;
+    transition: border-color 0.2s;
+}
+
+.factures-filter-select:hover {
+    border-color: #3b82f6;
+}
+
+.factures-filter-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Conteneur Table */
+.factures-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.factures-table-wrapper {
+    overflow-x: auto;
+}
+
+/* Table Styles */
+.factures-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.factures-table thead th {
+    padding: 16px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #f9fafb;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.factures-table tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.2s;
+}
+
+.factures-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.factures-table tbody td {
+    padding: 16px;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Cellules spécifiques */
+.facture-id {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.facture-patient-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.facture-montant {
+    font-weight: 600;
+    color: #059669;
+}
+
+.facture-mode-paiement {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Badges Statut */
+.facture-statut-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.facture-statut-badge.payee {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.facture-statut-badge.en-attente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.facture-statut-badge.annulee {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Actions */
+.facture-actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.facture-btn-action {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facture-btn-action:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.facture-btn-action.validate {
+    background: #10b981;
+    color: white;
+}
+
+.facture-btn-action.validate:hover {
+    background: #059669;
+}
+
+.facture-btn-action.print {
+    background: #3b82f6;
+    color: white;
+}
+
+.facture-btn-action.print:hover {
+    background: #2563eb;
+}
+
+.facture-btn-action.cancel {
+    background: #ef4444;
+    color: white;
+}
+
+.facture-btn-action.cancel:hover {
+    background: #dc2626;
+}
+
+/* État Vide */
+.factures-empty-state {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.factures-empty-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 16px;
+}
+
+.factures-empty-text {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+/* Modal */
+.factures-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.factures-modal-content {
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.factures-modal-header {
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.factures-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.factures-modal-body {
+    padding: 24px;
+}
+
+.factures-modal-info {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.factures-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.factures-info-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.factures-info-value {
+    font-size: 14px;
+    color: #111827;
+    font-weight: 500;
+}
+
+.factures-form-group {
+    margin-bottom: 16px;
+}
+
+.factures-form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.factures-form-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.factures-form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.factures-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.factures-btn-modal {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.factures-btn-modal.cancel {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+}
+
+.factures-btn-modal.cancel:hover {
+    background: #f9fafb;
+}
+
+.factures-btn-modal.confirm {
+    border: none;
+    background: #10b981;
+    color: white;
+}
+
+.factures-btn-modal.confirm:hover {
+    background: #059669;
+}
+
+/* Loading State */
+.factures-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #6b7280;
+}
+
+.factures-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #e5e7eb;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Error State */
+.factures-error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.factures-error-container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin: 16px 0 8px 0;
+}
+
+.factures-error-container p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.factures-btn-retry {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.factures-btn-retry:hover {
+    background: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .factures-container {
+        padding: 16px;
+    }
+
+    .factures-header {
+        padding: 20px;
+    }
+
+    .factures-title {
+        font-size: 22px;
+    }
+
+    .factures-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .factures-table-wrapper {
+        overflow-x: scroll;
+    }
+
+    .factures-modal-content {
+        width: 95%;
+    }
+}
+.facture-btn-action.edit {
+    background-color: #3b82f6;
+}
+
+.facture-btn-action.edit:hover {
+    background-color: #2563eb;
+}
