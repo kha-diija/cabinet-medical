@@ -29,7 +29,7 @@
 
 ---
 
-## 🩺 Aperçu
+##  Aperçu
 
 **MediCore** est une application web full-stack dédiée à la gestion complète d'un cabinet médical. Elle centralise les flux de travail entre trois types d'acteurs : **l'administrateur système**, **les médecins** et **les secrétaires**.
 
@@ -37,30 +37,29 @@ La plateforme couvre l'ensemble du cycle de vie d'un cabinet : inscription multi
 
 ---
 
-## 👥 Équipe & Répartition
+##  Équipe & Répartition
 
 Ce projet a été réalisé en équipe dans le cadre d'un projet académique à l'**ENSA Khouribga** — Université Sultan Moulay Slimane, sous l'encadrement de **Mme Karoum Bouchra** et **Mme Ennaji Fatima Zohra**.
 
 | Membre | Responsabilité principale |
 |--------|--------------------------|
-| **Khadija Elkartouch** | ⭐ **Espace Médecin** — Développement complet de l'interface et des fonctionnalités du médecin (dashboard, consultations, ordonnances, dossiers médicaux, rendez-vous, messagerie, notifications) |
+| **Khadija Elkartouch** |  **Espace Médecin** — Développement complet de l'interface et des fonctionnalités du médecin (dashboard, consultations, ordonnances, dossiers médicaux, rendez-vous, messagerie, notifications) |
 | Omaima Sabri | Espace Secrétaire |
 | Assia Houbbadi | Espace Administrateur |
 | Aya El Azzouzi | Architecture backend & authentification |
 
-> 📌 Ce README met particulièrement en valeur **l'espace médecin**, entièrement conçu et développé par Khadija Elkartouch.
 
 ---
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
-### 🔐 Authentification & Inscription
+###  Authentification & Inscription
 - **Inscription multi-étapes** — Formulaire guidé en 4 étapes : informations du cabinet → médecin responsable → secrétaire → confirmation avec signature numérique
 - **Connexion sécurisée** — JWT avec gestion des rôles (Admin / Médecin / Secrétaire)
 - **Réinitialisation du mot de passe** — Envoi d'un lien de réinitialisation par email (Gmail SMTP)
 - **Comptes protégés** — Verrouillage après tentatives échouées (`LoginAttemptService`)
 
-### 🛡️ Espace Administrateur
+###  Espace Administrateur
 - **Tableau de bord** — Statistiques globales : cabinets, médecins, patients, factures
 - **Gestion des utilisateurs** — CRUD complet (médecins, secrétaires, admins) avec activation/désactivation
 - **Gestion des cabinets** — Validation des demandes de création, consultation et modification des profils de cabinets
@@ -69,7 +68,7 @@ Ce projet a été réalisé en équipe dans le cadre d'un projet académique à 
 - **Demandes de création de cabinet** — Workflow d'approbation/refus avec notifications
 - **Alertes et notifications** — Système d'alertes temps réel pour les événements critiques
 
-### 👨‍⚕️ Espace Médecin
+###  Espace Médecin
 - **Tableau de bord** — Statistiques personnalisées : consultations du jour, patients en cours, rendez-vous à venir
 - **Gestion des rendez-vous** — Calendrier interactif avec vue journalière/hebdomadaire, ajout et modification
 - **Dossiers médicaux** — Création et consultation des dossiers patients avec historique complet
@@ -79,7 +78,7 @@ Ce projet a été réalisé en équipe dans le cadre d'un projet académique à 
 - **Messagerie interne** — Chat en temps réel avec la secrétaire (texte, audio, emoji)
 - **Notifications** — Alertes pour nouveaux rendez-vous, messages et événements
 
-### 🗓️ Espace Secrétaire
+###  Espace Secrétaire
 - **Tableau de bord** — Vue d'ensemble des activités du cabinet
 - **Gestion des rendez-vous** — Planification, confirmation et annulation des RDV patients
 - **Gestion des patients** — Enregistrement et suivi des patients (formulaire modal détaillé)
@@ -104,6 +103,8 @@ Ce projet a été réalisé en équipe dans le cadre d'un projet académique à 
 L'espace médecin constitue le cœur opérationnel de la plateforme. Il a été conçu pour optimiser le flux de travail clinique : de la prise en charge initiale du patient jusqu'à la prescription, en passant par la gestion des dossiers médicaux et la communication avec l'équipe administrative. Chaque module respecte des règles métier strictes (cycle de vie des rendez-vous, accès conditionné aux modules sensibles) et intègre des retours visuels immédiats pour le médecin.
 
 ### Module 1 — Tableau de bord médical
+<img width="480" height="230" alt="image" src="https://github.com/user-attachments/assets/61356a89-5195-4dd9-b143-d4aa67ff8e03" />
+
 
 Le tableau de bord est le point d'entrée principal après connexion. Il offre une **vue clinique personnalisée en temps réel** avec :
 
@@ -125,6 +126,7 @@ Le tableau de bord est le point d'entrée principal après connexion. Il offre u
 ---
 
 ### Module 2 — Gestion des patients
+<img width="598" height="276" alt="image" src="https://github.com/user-attachments/assets/7c8b3a3e-5845-42d7-b80e-89a9ff0f030d" />
 
 Interface de recherche et de consultation de la liste des patients du cabinet.
 
@@ -137,6 +139,7 @@ Interface de recherche et de consultation de la liste des patients du cabinet.
 ---
 
 ### Module 3 — Gestion des rendez-vous
+<img width="533" height="254" alt="image" src="https://github.com/user-attachments/assets/6c90679c-1f01-4d17-b0ca-941b97f81da9" />
 
 Module de visualisation et de gestion de l'agenda médical du praticien.
 
@@ -151,6 +154,7 @@ Module de visualisation et de gestion de l'agenda médical du praticien.
 ---
 
 ### Module 4 — Module de consultation
+<img width="383" height="182" alt="image" src="https://github.com/user-attachments/assets/589af661-fe6d-43e2-830e-07fffb9beb54" />
 
 Cœur de l'activité médicale. Ce module permet l'enregistrement structuré des consultations cliniques avec une logique de contrôle d'accès stricte.
 
@@ -170,6 +174,7 @@ Un patient doit obligatoirement être au statut `EN_COURS` pour permettre la sai
 ---
 
 ### Module 5 — Gestion des ordonnances
+<img width="392" height="183" alt="image" src="https://github.com/user-attachments/assets/f241479a-35fc-414c-bc17-a2b3d8e40539" />
 
 Module de prescription médicale accessible uniquement après l'enregistrement d'une consultation.
 
@@ -192,6 +197,7 @@ Le système refuse l'accès dans les cas suivants : absence de patient EN_COURS,
 ---
 
 ### Module 6 — Gestion du dossier médical
+<img width="392" height="178" alt="image" src="https://github.com/user-attachments/assets/09b3bb43-c33e-4af3-a8ef-8c41bcb2084e" />
 
 Référentiel central des informations de santé du patient. L'accès est conditionné à la présence d'un patient EN_COURS (même mécanisme de contrôle que la consultation).
 
@@ -219,6 +225,7 @@ Système de communication en temps réel entre le médecin et la secrétaire du 
 ---
 
 ### Module 8 — Paramètres et sécurité
+<img width="582" height="255" alt="image" src="https://github.com/user-attachments/assets/bb3d76c5-d5d6-424c-85c1-ab5e5c9646a4" />
 
 Interface dédiée à la gestion du compte et à la sécurité des accès du médecin.
 
@@ -238,6 +245,7 @@ Interface dédiée à la gestion du compte et à la sécurité des accès du mé
 ---
 
 ### Module 9 — Notifications
+<img width="553" height="202" alt="image" src="https://github.com/user-attachments/assets/70350935-075d-47b7-b7e9-2a5d086a6850" />
 
 Système de réception des alertes envoyées par la secrétaire, accessible via la barre de navigation.
 
@@ -330,19 +338,19 @@ L'espace médecin implémente fidèlement les **9 fonctionnalités principales**
 
 ---
 
-## 🏗️ Architecture & Technologies
+##  Architecture & Technologies
 
 | Couche | Technologie |
 |--------|-------------|
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="18"/> Frontend | React 19 (Vite 7) |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="18"/> Backend | Spring Boot 3.2 (Java) |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="18"/> Base de données | PostgreSQL via Supabase |
-| ☁️ Stockage fichiers | Supabase Storage (documents, logos) |
-| 🎨 Style | Tailwind CSS 4.x |
-| 🔐 Auth | JWT (jjwt 0.11.5) + Spring Security |
-| 📧 Email | Spring Mail (SMTP Gmail) |
-| 📊 Graphiques | Recharts |
-| 🔗 HTTP Client | Axios |
+|  Stockage fichiers | Supabase Storage (documents, logos) |
+|  Style | Tailwind CSS 4.x |
+|  Auth | JWT (jjwt 0.11.5) + Spring Security |
+|  Email | Spring Mail (SMTP Gmail) |
+|  Graphiques | Recharts |
+|  HTTP Client | Axios |
 
 **Patterns & librairies clés :**
 - Architecture **SPA** avec React Router DOM v7 et routes protégées par rôle
@@ -355,7 +363,7 @@ L'espace médecin implémente fidèlement les **9 fonctionnalités principales**
 
 ---
 
-## 🗄️ Base de données
+##  Base de données
 
 La plateforme utilise **PostgreSQL** hébergé sur **Supabase**, avec Spring Data JPA / Hibernate. Le schéma est géré automatiquement via `ddl-auto=update`.
 
@@ -468,7 +476,7 @@ Gestion-cabinet-/
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Prérequis
 
@@ -544,9 +552,7 @@ spring.servlet.multipart.max-file-size=10MB
 spring.servlet.multipart.max-request-size=10MB
 ```
 
-> ⚠️ Ne jamais versionner vos clés d'API ni vos identifiants. Utilisez des variables d'environnement en production.
 
-> 📧 Pour Gmail, utilisez un [mot de passe d'application](https://myaccount.google.com/apppasswords) plutôt que votre mot de passe principal.
 
 ### Frontend — `frontend/.env`
 
@@ -582,7 +588,7 @@ La demande est ensuite examinée et approuvée par un administrateur système.
 
 ---
 
-## 🔐 Sécurité
+##  Sécurité
 
 | Mécanisme | Description |
 |-----------|-------------|
@@ -598,13 +604,13 @@ La demande est ensuite examinée et approuvée par un administrateur système.
 
 ---
 
-## 👥 Auteurs
+##  Auteurs
 
 Projet réalisé en équipe dans le cadre d'un projet académique à l'**ENSA Khouribga** — Université Sultan Moulay Slimane, sous l'encadrement de **Mme Karoum Bouchra** et **Mme Ennaji Fatima Zohra**.
 
 | Membre | Contribution |
 |--------|-------------|
-| **Khadija Elkartouch** | ⭐ Espace Médecin complet (9 modules) |
+| **Khadija Elkartouch** |  Espace Médecin complet (9 modules) |
 | Omaima Sabri | Espace Secrétaire |
 | Assia Houbbadi | Espace Administrateur |
 | Aya El Azzouzi | Architecture backend & authentification |
